@@ -31,5 +31,3 @@ def get_candidates_by_skill(skill_name):
             candidates.append(candidate)
     return candidates
 
-load_candidates_form_json('candidates.json')
-print(get_candidates_by_name('leo'))
