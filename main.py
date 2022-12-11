@@ -1,11 +1,10 @@
 from flask import Flask, request, render_template
 from utils import get_candidate, get_candidates_by_name, get_candidates_by_skill, load_candidates_form_json
 app = Flask(__name__)
-
+data = load_candidates_form_json('candidates.json')
 
 @app.route('/')
 def index():
-    data = load_candidates_form_json('candidates.json')
     return render_template('index.html', candidates=data)
 
 
